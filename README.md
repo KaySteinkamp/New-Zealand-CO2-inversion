@@ -21,4 +21,4 @@ Run `doinv.m` in MATLAB. Adjust settings in `config`.
 Output folder, along with results and figures, are automatically created in the local folder.
 
 # License
-[MIT](https://github.com/KaySteinkamp/New-Zealand-CO2-inversion/blob/master/LICENSE)
+[MIT](https://github.com/KaySteinkamp/New-Zealand-CO2-inversion/blob/master/LICENSE.txt)
