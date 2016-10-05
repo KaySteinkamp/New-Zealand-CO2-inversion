@@ -1,0 +1,61 @@
+configuration file for NZ inversion
+---------------------------------------------------------------------------
+allowed parameter types:
+0: logical
+1: integer
+2: double
+3: string / array
+4: twin string
+---------------------------------------------------------------------------
+inversion setup:
+18
+3  period       = [2011;2013]
+3  type         = 'weekly'
+0  landprior    = .true.
+0  oceanprior   = .true.
+3  ocpriorType  = 'Takahashi'
+0  OzOOprior    = .true.
+2  OzOOAnn_pc   = 1000.0
+3  regionPatt   = 'prior'
+2  smoothWland  = 5.0
+2  smoothWoce   = 5.0
+3  offset       = [0;0;0]
+3  offsetUnc    = [.0001;.0001;.0001]
+3  workdir      = '~/ResearchProjects/NZinv_GitHub/'
+3  Fprior       = 'Priors/RegionPrior_scalingFac_monthly_newUnc'
+3  Ffemi        = 'EDGAR_v4.2/NZfossEm_edgar_2000-2010_extrap_1113.mat'
+3  FGreensFun   = 'GreensFun/GreensFun'
+0  chatty       = .true.
+0  optchi2      = .false.
+---------------------------------------------------------------------------
+handling of observational data:
+21
+0  syntheticObs = .false.
+0  synthDiCy    = .false.
+3  Fsynobs      = 'Observations/SyntheticObs/SyntheticObs_DiCy'
+2  synobsUnc    = 0.5
+0  includeBHD   = .true.
+0  includeLAU   = .true.
+0  includeRBM   = .false.
+3  Fobs         = 'Observations/HourlyData_3sites_common'
+0  include13h   = .true.
+0  include15h   = .false.
+2  minUnc       = 0.4
+0  smoothObs    = .false.
+2  iniscale     = 2.9
+0  useWtBsl     = .true.
+2  BslBiasSig   = 0.0
+0  adjustCCL    = .true.
+3  FwtBsl       = 'Observations/daily_NSbaseline'
+0  presubFoss   = .true.
+3  FrespFoss    = 'Observations/FossilResponse'
+2  uniNoiseX    = 0.0
+2  biasX        = 0.0
+---------------------------------------------------------------------------
+output configuration:
+4
+3  writedir    = 'output/'
+0  dosources   = .true.
+0  dodata      = .true.
+0  doplots     = .true.
+---------------------------------------------------------------------------
